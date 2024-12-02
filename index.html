@@ -46,7 +46,7 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-		        <font size="10" face="verdana" color="#FFC800" style="font-weight:bold; text-shadow: 0px 0px #000000"> Scene Graph Gneration <br> in Operating Rooms</font>
+		        <font size="10" face="verdana" color="#FFC800" style="font-weight:bold; text-shadow: 3px 3px #000000"> Scene Graph Gneration <br> in Operating Rooms</font>
                 <!--<div class="masthead-subheading">Welcome To Our Studio!</div>-->
                 <!--<div class="masthead-heading text-uppercase">Highly Accurate Dichotomous Image Segmentation</div>-->
                 <!--<a class="btn btn-primary btn-xl text-uppercase" href="#download">Tell Me More</a>-->
@@ -76,7 +76,7 @@
 <section class="page-section bg-light" id="4dor">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">4D-OR</h2>
+            <h2 class="section-heading text-uppercase">4D-OR (Ozsoy et al.)</h2>
         </div>
         <div class="row">
             <div class="col-lg-12">
@@ -97,107 +97,41 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">4D-OR Reformat</h2>
-                    <h3 class="section-subheading text-muted" style="text-align:justify">Currently, existing image segmentation tasks mainly focus on segmenting objects with specific characteristics, e.g., salient, camouflaged, meticulous, or specific categories. Most of them have the same input/output formats, and barely use exclusive mechanisms designed for segmenting targets in their models, which means almost all tasks are dataset-dependent. Thus, it is very promising to formulate a category-agnostic DIS task for accurately segmenting objects with different structure complexities, regardless of their characteristics. Compared with semantic segmentation, the proposed DIS task usually focuses on images with single or a few targets, from which getting richer accurate details of each target is more feasible.</h3>
-                    <h3 class="section-subheading text-muted" style="text-align:justify">To build the highly accurate Dichotomous Image Segmentation dataset (DIS5K), we first manually collected over 12,000 images from Flickr1 based on our pre-designed keywords. Then, we obtained 5,470 images of 22 groups and 225 categories from the 12,000 images according to the structural complexities of the objects. Each image is then manually labeled with pixel-wise accuracy using GIMP. The labeled targets in DIS5K mainly focus on the “objects of the images defined by the pre-designed keywords (categories)” regardless of their characteristics e.g., salient, common, camouflaged, meticulous, etc. The average per-image labeling time is ∼30 minutes and some images cost up to 10 hours.</h3>
-                    <!--<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>-->
-                </div>
-                <!--<div class="row">
-                    <img class="img-fluid" src="assets/img/overview/categories.png" alt="Categories and Groups" style="width:1200px"/>
-                    <div class="portfolio-caption">
-                        <div class="portfolio-caption-heading">Categories and Complexities</div>
-                    </div>
-                </div>-->
-                <div class="row">
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 2-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#overviewModal1">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/overview/categories.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <h4 style="text-align:center">Groups and Categories</h4>
-                                <!--<div class="portfolio-caption-heading">Groups and Categories</div>-->
-                                <!--<div class="portfolio-caption-subheading text-muted">Graphic Design</div>-->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 3-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#overviewModal2">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/overview/complexities_comp.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <h4 style="text-align:center">Quantitative Complexities</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 2-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#overviewModal3">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/overview/complexities-qual.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <h4 style="text-align:center">Qualitative Complexities</h4>
-                                <!--<div class="portfolio-caption-heading">Statistics on Groups and Categories</div>-->
-                                <!--<div class="portfolio-caption-subheading text-muted">Graphic Design</div>-->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                        <!-- Portfolio item 4-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#overviewModal4">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/overview/general-characteristics-small.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <h4 style="text-align:center">Images Characteristics</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-                        <!-- Portfolio item 5-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#overviewModal5">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/overview/intra_inter_similarities-small.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <h4 style="text-align:center">Intra- and Inter-categories similarities</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <!-- Portfolio item 6-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#overviewModal6">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/overview/test_subsets-small.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <h4 style="text-align:center">Dataset Splitting</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<h3 class="section-subheading text-muted" style="text-align:justify">
+    <p><strong>We reformatted the original 4D-OR dataset from two aspects:</strong></p>
+    
+    <p><strong>Reformatting of SGG Annotations</strong></p>
+    <p>Unlike the original 4D-OR dataset, we standardized the SGG annotations to align with popular open-world SGG datasets such as VG and OI. This adjustment makes the data more accessible and easier to process and apply.</p>
+
+    <!-- 第一组左右并排图片 -->
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="text-align: center;">
+            <img src="image1.jpg" alt="Image 1" style="width: 45%;">
+            <p>Image 1 Title</p>
+        </div>
+        <div style="text-align: center;">
+            <img src="image2.jpg" alt="Image 2" style="width: 45%;">
+            <p>Image 2 Title</p>
+        </div>
+    </div>
+    
+    <p><strong>Reformatting of Overall Structure</strong></p>
+    <p>The original 4D-OR dataset was organized based on different surgical segments, mixing data from various modalities within separate surgical segment folders. To facilitate processing, we reorganized the dataset based on modality, categorizing input data into distinct modalities (e.g., 2D multi-view images, 3D point clouds, textual annotations). This reorganization enables more efficient multimodal processing.</p>
+    
+    <!-- 第二组左右并排图片 -->
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="text-align: center;">
+            <img src="image3.jpg" alt="Image 3" style="width: 45%;">
+            <p>Image 3 Title</p>
+        </div>
+        <div style="text-align: center;">
+            <img src="image4.jpg" alt="Image 4" style="width: 45%;">
+            <p>Image 4 Title</p>
+        </div>
+    </div>
+</h3>
+
+
         </section>
 
         <!-- Download-->
@@ -210,9 +144,9 @@
             <!-- 左侧图片 -->
             <div class="col-md-6 text-center">
                 <img class="img-fluid" src="assets/img/download/s2former.jpg" alt="..." />
-                <h4 class="my-3">S^2Former-OR</h4>
+                <h4 class="my-3">S<sup>2</sup>Former-OR</h4>
                 <h3 class="section-subheading text-muted">
-                    Overview of the proposed single-stage multi-view bi-modal S^2Former-OR for scene graph generation from operating rooms. 
+                    Overview of the proposed single-stage multi-view bi-modal S<sup>2</sup>Former-OR for scene graph generation from operating rooms. 
                 </h3>
             </div>
             <!-- 右侧图片 -->
@@ -254,12 +188,12 @@
                     <h2 class="section-heading text-uppercase">Citation</h2>
                     <!--<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>-->
                 </div>
-                <h3 class="section-subheading text-muted">Jialun Pei, Diandian Guo, Jingyang Zhang, Manxi Lin, Yueming Jin and Pheng Ann Heng. S^2Former-OR: Single-Stage Bimodal Transformer for Scene Graph Generation in OR. TMI, 2024.[<a href="https://arxiv.org/pdf/2402.14461" target="_blank">Arxiv</a>][<a href="https://github.com/PJLallen/S2Former-OR" target="_blank">Github</a>][<a href="https://gocuhk-my.sharepoint.com/:f:/g/personal/jialunpei_cuhk_edu_hk/Es4MUdHVUE1LpOJn2vHQFKMBNGfr2O0LT0xLG8HLMFVWEg?e=ovg5RL" target="_blank">Reformated 4D-OR Dataset</a>]</h3>
+                <h3 class="section-subheading text-muted">Jialun Pei, Diandian Guo, Jingyang Zhang, Manxi Lin, Yueming Jin and Pheng Ann Heng. S<sup>2</sup>Former-OR: Single-Stage Bimodal Transformer for Scene Graph Generation in OR. TMI, 2024.[<a href="https://arxiv.org/pdf/2402.14461" target="_blank">Arxiv</a>][<a href="https://github.com/PJLallen/S2Former-OR" target="_blank">Github</a>][<a href="https://gocuhk-my.sharepoint.com/:f:/g/personal/jialunpei_cuhk_edu_hk/Es4MUdHVUE1LpOJn2vHQFKMBNGfr2O0LT0xLG8HLMFVWEg?e=ovg5RL" target="_blank">Reformated 4D-OR Dataset</a>]</h3>
                 <h3 class="section-subheading text-muted">Diandian Guo, Manxi Lin, Jialun Pei, He Tang, Yueming Jin and Pheng Ann Heng. Tri-modal Confluence with Temporal Dynamics for Scene Graph Generation in Operating Rooms. MICCAI, 2024.[<a href="https://arxiv.org/pdf/2404.09231" target="_blank">Arxiv</a>][<a href="https://github.com/RascalGdd/TriTemp-OR" target="_blank">Github</a>]</h3>
                 <p>Bibtex</p>
                 <p class="bibtex", align="left">@article{s2former2024, 
 		    <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp author={Jialun Pei and Diandian Guo and Jingyang Zhang and Manxi Lin and Yueming Jin and Pheng Ann Heng},
-                    <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp title={S^2Former-OR: Single-Stage Bimodal Transformer for Scene Graph Generation in OR},  
+                    <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp title={S<sup>2</sup>Former-OR: Single-Stage Bimodal Transformer for Scene Graph Generation in OR},  
                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp booktitle={TMI},
                     <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp year={2024}<br>}
                 </p>
