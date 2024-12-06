@@ -31,7 +31,6 @@
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#applications">Demo</a></li>
 	       <li class="nav-item"><a class="nav-link" href="#4dor">4D-OR</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#overview">4D-OR Reformat</a></li>
                         <li class="nav-item"><a class="nav-link" href="#methods">Methods</a></li>
 	       <li class="nav-item"><a class="nav-link" href="#results">Results</a></li>
                         <li class="nav-item"><a class="nav-link" href="#citation">Citation</a></li>
@@ -80,10 +79,11 @@
     <div class="container">
         <div class="text-center">
             <h2 class="section-heading text-uppercase">
-    4D-OR (<span style="text-transform: none;">Ozsoy et al.</span>)
-</h2>
-
-
+                4D-OR Dataset (<span style="text-transform: none;">Özsoy et al.</span>)
+            </h2>
+            <h4 class="my-3">
+        <a href="https://github.com/egeozsoy/4D-OR" target="_blank" style="display: block; margin-bottom: 10px;">4D-OR Dataset</a>
+            </h4>
         </div>
         <div class="row">
             <div class="col-lg-12">
@@ -96,54 +96,80 @@
                 </div>
             </div>
         </div>
+
+        <!-- Adding content from 4D-OR Reformat -->
+        <div class="text-center mt-5">
+            <h3 class="section-subheading text-muted" style="text-align:justify">
+                <p><strong>We gratefully acknowledge the contributions of 4D-OR benchmark (Özsoy et al.), which significantly facilitates our work.</strong></p>
+                <p><strong>Based on 4D-OR, we have reformatted the dataset to be more user-friendly. </strong></p>
+
+                <p><strong>Reformatting of SGG Annotations</strong></p>
+                <p>Unlike the original 4D-OR dataset, we standardized the SGG annotations to align with popular open-world SGG datasets such as Visual Genome (Krishna et al., 2017) and Open Images (Kuznetsova et al., 2020). This adjustment makes the data more accessible and easier to process and apply.</p>
+
+                <!-- First set of images -->
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="text-align: center;">
+                        <img src="assets/img/data/obj.png" alt="Image 1" style="width: 95%;">
+                        <p>Reformatted annotations for object detections in ORs</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="assets/img/data/rel.png" alt="Image 2" style="width: 95%;">
+                        <p>Reformatted annotations for triplet relations in ORs</p>
+                    </div>
+                </div>
+
+                <p><strong>Reformatting of Overall Structure</strong></p>
+                <p>The original 4D-OR dataset was organized based on different surgical segments, mixing data from various modalities within separate surgical segment folders. To facilitate processing, we reorganized the dataset based on modality, categorizing input data into distinct modalities (e.g., 2D multi-view images, 3D point clouds, textual annotations). This reorganization enables more efficient multimodal processing.</p>
+
+                <!-- Second set of images -->
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div style="text-align: center;">
+                        <img src="assets/img/data/img.png" alt="Image 3" style="width: 95%;">
+                        <p>Reformatted multi-view 2D image inputs</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="assets/img/data/point.png" alt="Image 4" style="width: 95%;">
+                        <p>Reformatted 3D point cloud inputs</p>
+                    </div>
+                </div>
+                <p><strong>Training and Inference</strong></p>
+                <p>Download the Processed reformatted 4D-OR provided below. The data folder should be like this:</p>
+    <pre>
+S2Former-OR/data/: 
+    /images/: unzip 4d_or_images_multiview_reltrformat.zip
+    /points/: unzip points.zip
+    /infer/: unzip infer.zip
+    /train.json: from reltr_annotations_8.3.zip
+    /val.json: from reltr_annotations_8.3.zip
+    /test.json: from reltr_annotations_8.3.zip
+    /rel.json: from reltr_annotations_8.3.zip
+    </pre>
+    <p>After that, you can use the scripts in 
+    <a href="https://github.com/PJLallen/S2Former-OR" target="_blank">S<sup>2</sup>Former-OR</a> 
+    and 
+    <a href="https://github.com/RascalGdd/TriTemp-OR" target="_blank">TriTemp-OR</a> 
+    for training and inference. Please note that you need to first run the provided inference script and upload your inferred predictions <a href="https://bit.ly/4D-OR_evaluator" target="_blank">here</a> for evaluation on the test set.
+</p>
+
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">
+            </h2>
+            <h4 class="my-3">
+        <a href="https://gocuhk-my.sharepoint.com/:f:/g/personal/jialunpei_cuhk_edu_hk/Es4MUdHVUE1LpOJn2vHQFKMBNGfr2O0LT0xLG8HLMFVWEg?e=ovg5RL" target="_blank" style="display: block;">Reformatted Version</a>
+            </h4>
+        </div>
+
+            </h3>
+        </div>
     </div>
 </section>
 
-        <!-- Overview Grid-->
-        <section class="page-section" id="overview">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">4D-OR Reformat</h2>
-<h4 class="my-3"><a href="https://gocuhk-my.sharepoint.com/:f:/g/personal/jialunpei_cuhk_edu_hk/Es4MUdHVUE1LpOJn2vHQFKMBNGfr2O0LT0xLG8HLMFVWEg?e=ovg5RL" target="_blank">Reformatted 4D-OR Dataset</a></h4>
-<h3 class="section-subheading text-muted" style="text-align:justify">
-    <p><strong>We reformatted the original 4D-OR dataset from two aspects:</strong></p>
-    
-    <p><strong>Reformatting of SGG Annotations</strong></p>
-    <p>Unlike the original 4D-OR dataset, we standardized the SGG annotations to align with popular open-world SGG datasets such as Visual Genome (Krishna et al., 2017) and Open Images (Kuznetsova et al., 2020). This adjustment makes the data more accessible and easier to process and apply.</p>
-
-    <!-- 第一组左右并排图片 -->
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-        <div style="text-align: center;">
-            <img src="assets\img\data\obj.png" alt="Image 1" style="width: 95%;">
-            <p>Reformatted annotations for object detections in ORs</p>
-        </div>
-        <div style="text-align: center;">
-            <img src="assets\img\data\rel.png" alt="Image 2" style="width: 95%;">
-            <p>Reformatted annotations for triplet relations in ORs</p>
-        </div>
-    </div>
-    
-    <p><strong>Reformatting of Overall Structure</strong></p>
-    <p>The original 4D-OR dataset was organized based on different surgical segments, mixing data from various modalities within separate surgical segment folders. To facilitate processing, we reorganized the dataset based on modality, categorizing input data into distinct modalities (e.g., 2D multi-view images, 3D point clouds, textual annotations). This reorganization enables more efficient multimodal processing.</p>
-    
-    <!-- 第二组左右并排图片 -->
-    <div style="display: flex; justify-content: space-between; align-items: center;">
-        <div style="text-align: center;">
-            <img src="assets\img\data\img.png" alt="Image 3" style="width: 95%;">
-            <p>Reformatted multi-view 2D image inputs</p>
-        </div>
-        <div style="text-align: center;">
-            <img src="assets\img\data\point.png" alt="Image 4" style="width: 95%;">
-            <p>Reformatted 3D point cloud inputs</p>
-        </div>
-    </div>
-</h3>
 
 
         </section>
 
         <!-- Download-->
-        <section class="page-section bg-light" id="methods">
+        <section class="page-section" id="methods">
     <div class="container">
         <div class="text-center">
             <h2 class="section-heading text-uppercase">Methods</h2>
